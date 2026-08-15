@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kazi Shahriar Abdullah | Portfolio</title>
+
+  <!-- Google Fonts: a bold display face for headings, a clean sans for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Icon font (Font Awesome) for the small social / button icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Our own stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar">
+    <div class="nav-container">
+      <!-- Logo / short name mark -->
+      <a href="#home" class="logo">niloy.swe.bd</a>
+
+      <!-- Navigation links (hidden on mobile until the menu button is tapped) -->
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Hamburger button for small screens -->
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero section: diagonal violet + lime background with a framed photo on the right, built with plain HTML/CSS -->
+  <section class="hero" id="home">
+
+    <!-- Background layers: solid violet base + a lime shape clipped into
+         a diagonal using CSS clip-path (no image files involved) -->
+    <div class="hero-bg">
+      <div class="hero-bg-lime"></div>
+      <!-- decorative dotted grid, purely CSS (radial-gradient dots) -->
+      <div class="hero-dots hero-dots-1"></div>
+      <div class="hero-dots hero-dots-2"></div>
+      <!-- decorative squiggle line, drawn with inline SVG -->
+      <svg class="hero-squiggle" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M2 20 Q 20 2, 38 20 T 74 20 T 110 20" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
+      </svg>
+      <!-- decorative "staircase" accent, drawn with inline SVG -->
+      <svg class="hero-stairs" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M2 38 H16 V26 H30 V14 H44 V2" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="hero-container">
+
+      <!-- LEFT SIDE: headline + info -->
+      <div class="hero-left">
+        <p class="hero-eyebrow">Hi, I'm Kazi Shahriar Abdullah</p>
+
+        <h1 class="hero-headline">
+          <span>Web</span>
+          <span>Developer.</span>
+        </h1>
+
+        <p class="hero-desc">
+          I like to build clean, reliable web products while sharpening
+          my skills as a 6th semester software engineering student.
+        </p>
+
+        <div class="hero-mini-grid">
+          <p>Currently strengthening my foundations in HTML, CSS,
+             JavaScript &amp; modern frameworks.</p>
+          <p>Enthusiastic about turning coursework and personal projects
+             into real, working products.</p>
+        </div>
+
+        <!-- Call to action buttons -->
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+
+        <!-- Social / contact icon buttons -->
+        <div class="social-buttons">
+          <a href="https://github.com/kaziShahriarAbdullah" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/kazi-shahriar-abdullah-462b32362/" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://wa.me/8801553405905" target="_blank" rel="noopener noreferrer" class="social-btn" title="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE: profile picture, framed like a photo card -->
+      <div class="hero-right">
+        <div class="hero-photo-wrap">
+
+          <!-- Profile photo: replace profile.jpg with your own headshot (500x500px+); falls back to a placeholder if missing -->
+          <img
+            src="profile.jpg"
+            alt="Kazi Shahriar Abdullah"
+            class="hero-photo"
+            onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22480%22 height=%22560%22><rect width=%22480%22 height=%22560%22 fill=%22%236768ab%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22%23ffffff%22 font-family=%22sans-serif%22 font-size=%2228%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22>Your Photo</text></svg>'"
+          />
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Thin vertical strip of decorative shapes at the far right edge,
+         echoing the small icon column in the reference design -->
+    <div class="hero-edge-icons" aria-hidden="true">
+      <span class="edge-shape edge-square"></span>
+      <span class="edge-shape edge-diamond"></span>
+      <span class="edge-shape edge-diamond"></span>
+      <span class="edge-shape edge-diamond"></span>
+    </div>
+
+    <!-- Small scroll-down hint at the bottom of the hero section -->
+    <a href="#about" class="scroll-hint">
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
+  </section>
+
+
+  <!-- ===================== ABOUT SECTION ===================== -->
+  <section class="section" id="about">
+    <h2 class="section-title"><span>01.</span> About Me</h2>
+    <div class="about-content">
+      <p>
+        I'm Kazi Shahriar Abdullah, currently a 6th semester student who
+        enjoys solving problems and building things that live on the
+        internet. I focus on writing clean, maintainable code and
+        creating user interfaces that feel simple and natural to use.
+      </p>
+      <ul class="about-info">
+        <li><strong>Name:</strong> Kazi Shahriar Abdullah</li>
+        <li><strong>Semester:</strong> 6th Semester</li>
+        <li><strong>WhatsApp:</strong> <a href="https://wa.me/8801553405905" target="_blank" rel="noopener noreferrer">01553405905</a></li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/kaziShahriarAbdullah" target="_blank" rel="noopener noreferrer">github.com/kaziShahriarAbdullah</a></li>
+        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kazi-shahriar-abdullah-462b32362/" target="_blank" rel="noopener noreferrer">View Profile</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS SECTION ===================== -->
+  <section class="section" id="skills">
+    <h2 class="section-title"><span>02.</span> Skills</h2>
+    <div class="skills-grid">
+      <!-- Each card is one skill; feel free to add / remove / edit these -->
+      <div class="skill-card">
+        <i class="fa-brands fa-html5"></i>
+        <p>HTML5</p>
+      </div>
+      <div class="skill-card">
+        <i class="fa-brands fa-css3-alt"></i>
+        <p>CSS3</p>
+      </div>
+      <div class="skill-card">
+        <i class="fa-brands fa-js"></i>
+        <p>JavaScript</p>
+      </div>
+     
+      <div class="skill-card">
+        <i class="fa-brands fa-java"></i>
+        <p>Java</p>
+      </div>
+      <div class="skill-card">
+        <i class="fa-solid fa-leaf"></i>
+        <p>Spring Boot</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS SECTION ===================== -->
+  <section class="section" id="projects">
+    <h2 class="section-title"><span>03.</span> Projects</h2>
+    <div class="projects-grid">
+
+      <!-- Project cards: replace name, description and links with your own; GitHub URLs are placeholders -->
+
+      <!-- Project card 1: Online Examination System -->
+      <div class="project-card">
+        <div class="project-icon"><i class="fa-solid fa-file-pen"></i></div>
+        <h3>Online Examination System</h3>
+        <p>A web-based platform for creating, conducting and grading exams online, with separate views for admins and students, timed tests and automatic scoring.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">html</span>
+          <span class="tech-tag">css</span>
+          <span class="tech-tag">javascript</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/kaziShahriarAbdullah/online-examination-system" target="_blank" rel="noopener noreferrer" class="link-btn">
+            <i class="fa-brands fa-github"></i> Code
+          </a>
+          <!-- No live demo for this project - remove/keep as needed -->
+        </div>
+      </div>
+
+      <!-- Project card 2: Book Counselling Hour -->
+      <div class="project-card">
+        <div class="project-icon"><i class="fa-solid fa-calendar-check"></i></div>
+        <h3>Book Counselling Hour</h3>
+        <p>An appointment booking app that lets students schedule counselling sessions with available mentors, with real-time slot selection and confirmation notices.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">html</span>
+          <span class="tech-tag">css</span>
+          <span class="tech-tag">javascript</span>
+          <span class="tech-tag">electronjs</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/kaziShahriarAbdullah/book-counselling-hour" target="_blank" rel="noopener noreferrer" class="link-btn">
+            <i class="fa-brands fa-github"></i> Code
+          </a>
+          <a href="javascript:void(0)" class="link-btn" title="Add your live demo URL here">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+          </a>
+        </div>
+      </div>
+
+      <!-- Project card 3: Personal Portfolio -->
+      <div class="project-card">
+        <div class="project-icon"><i class="fa-solid fa-id-card"></i></div>
+        <h3>Personal Portfolio</h3>
+        <p>This very site - a responsive personal portfolio built from scratch with vanilla HTML, CSS and JavaScript, featuring scroll reveal animations and a working contact form.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">html</span>
+          <span class="tech-tag">css</span>
+          <span class="tech-tag">javascript</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/kaziShahriarAbdullah/personal-portfolio" target="_blank" rel="noopener noreferrer" class="link-btn">
+            <i class="fa-brands fa-github"></i> Code
+          </a>
+          <a href="javascript:void(0)" class="link-btn" title="Add your live demo URL here">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+          </a>
+        </div>
+      </div>
+
+      <!-- Project card 4: Other project (edit freely) -->
+      <div class="project-card">
+        <div class="project-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+        <h3>Smatr cafe</h3>
+        <p>A small storefront system with product listings, a shopping cart and checkout summary, built to practice state management and responsive UI design.</p>
+        <div class="tech-tags">
+      
+          <span class="tech-tag">Java</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/kaziShahriarAbdullah/mini-ecommerce-store" target="_blank" rel="noopener noreferrer" class="link-btn">
+            <i class="fa-brands fa-github"></i> Code
+          </a>
+          <a href="javascript:void(0)" class="link-btn" title="Add your live demo URL here">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+          </a>
+        </div>
+      </div>
+     <div class="project-card">
+        <div class="project-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+        <h3>Listing system </h3>
+        <p>A small storefront system with product listings, a shopping cart and checkout summary, built to practice state management and responsive UI design.</p>
+        <div class="tech-tags">
+      
+          <span class="tech-tag">C</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/kaziShahriarAbdullah/mini-ecommerce-store" target="_blank" rel="noopener noreferrer" class="link-btn">
+            <i class="fa-brands fa-github"></i> Code
+          </a>
+          <a href="javascript:void(0)" class="link-btn" title="Add your live demo URL here">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+          </a>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- ===================== ACADEMIC BACKGROUND SECTION ===================== -->
+  <section class="section" id="education">
+    <h2 class="section-title"><span>04.</span> Academic Background</h2>
+    <div class="education-card">
+      <div class="education-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+      <div class="education-details">
+        <h3>Bachelor of Science in Software Engineering</h3>
+        <p class="education-institute">Daffodil International University</p>
+        <p class="education-location"><i class="fa-solid fa-location-dot"></i> Bangladesh</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT SECTION ===================== -->
+  <section class="section" id="contact">
+    <h2 class="section-title"><span>05.</span> Contact</h2>
+
+    <div class="contact-wrapper">
+
+      <!-- LEFT: intro text + direct links -->
+      <div class="contact-info">
+        <p>Have a project in mind or just want to say hi? Give me a call or connect with me online — I'll get back to you as soon as I can.</p>
+
+        <a href="https://wa.me/8801553405905" target="_blank" rel="noopener noreferrer" class="contact-email-link">
+          <i class="fa-brands fa-whatsapp"></i> 01553405905
+        </a>
+
+        <div class="social-buttons contact-socials">
+          <a href="https://github.com/kaziShahriarAbdullah" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/kazi-shahriar-abdullah-462b32362/" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://wa.me/8801553405905" target="_blank" rel="noopener noreferrer" class="social-btn" title="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <p>Designed &amp; built by <span>Kazi Shahriar Abdullah</span> &copy; <span id="year"></span></p>
+  </footer>
+
+  <!-- Our JavaScript file, loaded at the end so the HTML is ready first -->
+  <script src="script.js"></script>
+</body>
+</html>
